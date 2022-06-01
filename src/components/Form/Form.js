@@ -1,27 +1,29 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Types from "../Types/Types";
+import FileUpload from "../FileUpload/FileUpload";
 // import { useSelector } from "react-redux";
 import "./Form.css";
 
 function Form() {
   const [startDate, setStartDate] = useState(new Date());
 
-  const [info, setInfo] = useState({
-    // name: "",
-    // lastName: "",
-    // email: "",
-    // faculty: "",
-    // group: "",
-    // specialty: "",
-    // year: "",
-    // phone: "",
-    // type: "",
-    // message: "",
-  });
+  const [info, setInfo] = useState({});
 
   const handleChange = (e) => {
     setInfo({ ...info, [e.target.name]: e.target.value });
+    console.log(info);
+  };
+
+  const handleType = (e) => {
+    setInfo({ ...info, [e.target.name]: e.target.value });
+    console.log(info);
+    return (
+      <div>
+        <Types />
+      </div>
+    );
   };
 
   const handleSubmit = (e) => {
@@ -44,7 +46,6 @@ function Form() {
           onChange={handleChange}
           value={info.firstName}
         />
-        {/* Uncomment the next line to show the error message */}
         {/* <span id="first-name-error">Please enter a first name</span> */}
         <label>Soyad</label>
         <input
@@ -56,7 +57,6 @@ function Form() {
           value={info.lastName}
           onChange={handleChange}
         />
-        {/* Uncomment the next line to show the error message */}
         {/* <span id="last-name-error">Please enter a last name</span> */}
         <label>E-mail</label>
         <input
@@ -123,8 +123,8 @@ function Form() {
         <label>Ərizə növləri</label>
         <select
           className="form-field rst_select invalid"
-          required="true"
-          onChange={handleChange}
+          required={true}
+          onChange={handleType}
           name="type"
           id="type"
           aria-invalid="true"
@@ -174,8 +174,9 @@ function Form() {
           onChange={handleChange}
           value={info.message}
         ></textarea>
-        {/* Uncomment the next line to show the error message */}
         {/* <span id="email-error">Please enter an email address</span> */}
+
+        <FileUpload />
         <button className="form-field btn" type="submit">
           Göndər
         </button>

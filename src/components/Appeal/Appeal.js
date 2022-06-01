@@ -8,11 +8,16 @@ import "./Appeal.css";
 function Appeal() {
   const [isClicked, setIsClicked] = useState(true);
 
-  const handleIsClicked = () => {
-    setIsClicked(false);
-    console.log(isClicked);
+  const handleIsAppealClicked = () => {
+    setIsClicked(true);
+    // console.log(isClicked);
   };
-  console.log(isClicked)
+
+  const handleIsStatusClicked = () => {
+    setIsClicked(false);
+    // console.log(isClicked);
+  };
+  console.log(isClicked);
   return (
     <div className="wrapper">
       <div className="main">
@@ -23,7 +28,10 @@ function Appeal() {
           </p>
           <p className="headings heading-3">Müracİət növünü seçİn</p>
         </div>
-        <Choise clicked={handleIsClicked} />
+        <Choise
+          appealClicked={handleIsAppealClicked}
+          statusClicked={handleIsStatusClicked}
+        />
         {isClicked ? <Form /> : <Status />}
       </div>
     </div>
