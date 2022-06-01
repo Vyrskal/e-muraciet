@@ -8,13 +8,12 @@ import "./common.css";
 function App() {
   return (
     <div className="app">
-      <Appeal />
-      {/* <Route exact path="/">
+    {/* <Route exact path="/"> */}
         <Appeal />
-      </Route>
-      <Route path="/list/:id">
-        < />
-        </Route> */}
+    {/* </Route> */}
+      {/* <Route exact path="/status">
+        <Appeal />
+      </Route> */}
     </div>
   );
 }

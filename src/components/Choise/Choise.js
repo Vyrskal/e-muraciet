@@ -2,15 +2,15 @@ import React from "react";
 // import { useSelector } from "react-redux";
 import "./Choise.css";
 
-function Choise() {
+function Choise(props) {
   return (
-    <div class="inner">
-      <ul class="nav menu">
-        <li class="item-156 current active" data-menuanchor="/">
-          <a href="/">Ərİzə</a>
+    <div className="inner">
+      <ul className="nav menu">
+        <li className="item-156 current active" data-menuanchor="/">
+          Ərİzə
         </li>
-        <li class="item-158" data-menuanchor="/">
-          <a href="/">Status</a>
+        <li className="item-158" data-menuanchor="/" onClick={props.clicked}>
+          Status
         </li>
       </ul>
     </div>

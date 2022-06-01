@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Choise from "../Choise/Choise";
 import Form from "../Form/Form";
+import Status from "../Status/Status";
 // import { useSelector } from "react-redux";
 import "./Appeal.css";
 
 function Appeal() {
+  const [isClicked, setIsClicked] = useState(true);
+
+  const handleIsClicked = () => {
+    setIsClicked(false);
+    console.log(isClicked);
+  };
+  console.log(isClicked)
   return (
     <div className="wrapper">
       <div className="main">
@@ -15,8 +23,8 @@ function Appeal() {
           </p>
           <p className="headings heading-3">Müracİət növünü seçİn</p>
         </div>
-        <Choise />
-        <Form />
+        <Choise clicked={handleIsClicked} />
+        {isClicked ? <Form /> : <Status />}
       </div>
     </div>
   );

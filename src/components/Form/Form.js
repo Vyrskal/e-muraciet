@@ -1,15 +1,37 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 // import { useSelector } from "react-redux";
 import "./Form.css";
 
 function Form() {
   const [startDate, setStartDate] = useState(new Date());
+
+  const [info, setInfo] = useState({
+    // name: "",
+    // lastName: "",
+    // email: "",
+    // faculty: "",
+    // group: "",
+    // specialty: "",
+    // year: "",
+    // phone: "",
+    // type: "",
+    // message: "",
+  });
+
+  const handleChange = (e) => {
+    setInfo({ ...info, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(info);
+  };
+
   return (
     <div className="form-wrapper">
-      <form className="register-form">
+      <form className="register-form" onSubmit={handleSubmit}>
         {/* Uncomment the next line to show the success message */}
         {/* <div className="success-message">Success! Thank you for registering</div> */}
         <label>Ad</label>
@@ -19,6 +41,8 @@ function Form() {
           type="text"
           placeholder="First Name"
           name="firstName"
+          onChange={handleChange}
+          value={info.firstName}
         />
         {/* Uncomment the next line to show the error message */}
         {/* <span id="first-name-error">Please enter a first name</span> */}
@@ -29,6 +53,8 @@ function Form() {
           type="text"
           placeholder="Last Name"
           name="lastName"
+          value={info.lastName}
+          onChange={handleChange}
         />
         {/* Uncomment the next line to show the error message */}
         {/* <span id="last-name-error">Please enter a last name</span> */}
@@ -39,6 +65,8 @@ function Form() {
           type="text"
           placeholder="Email"
           name="email"
+          value={info.email}
+          onChange={handleChange}
         />
         <label>Fakültə</label>
         <input
@@ -47,6 +75,8 @@ function Form() {
           type="text"
           placeholder="ITIF"
           name="faculty"
+          value={info.faculty}
+          onChange={handleChange}
         />
         <label>Qrup</label>
         <input
@@ -55,6 +85,8 @@ function Form() {
           type="text"
           placeholder="604.19E"
           name="group"
+          value={info.group}
+          onChange={handleChange}
         />
         <label>İxtisas</label>
         <input
@@ -63,11 +95,15 @@ function Form() {
           type="text"
           placeholder="Computer Science"
           name="specialty"
+          value={info.specialty}
+          onChange={handleChange}
         />
         <label>Qəbul ili</label>
         <DatePicker
           selected={startDate}
-          onChange={(date) => setStartDate(date)}
+          onChange={handleChange}
+          value={info.year}
+          name="year"
           showYearPicker
           dateFormat="yyyy"
           yearItemNumber={6}
@@ -81,15 +117,18 @@ function Form() {
           type="tel"
           placeholder="+994() xxx-xx-xx"
           name="phone"
+          onChange={handleChange}
+          value={info.phone}
         />
         <label>Ərizə növləri</label>
         <select
-          className="form-field rst_select  invalid"
+          className="form-field rst_select invalid"
           required="true"
-          onchange="changeField(this);"
-          name="types"
-          id="types"
+          onChange={handleChange}
+          name="type"
+          id="type"
           aria-invalid="true"
+          value={info.type}
         >
           <option></option>
           <option value="Təhsil alması barədə arayış">
@@ -123,7 +162,7 @@ function Form() {
           <option value="Əməkdaşları üçün iş yeri barədə arayış">
             Əməkdaşları üçün iş yeri barədə arayış
           </option>
-        </select>{" "}
+        </select>
         <label>Qeydləriniz</label>
         <textarea
           // className="form-field"
@@ -132,6 +171,8 @@ function Form() {
           cols="80"
           rows="12"
           aria-invalid="false"
+          onChange={handleChange}
+          value={info.message}
         ></textarea>
         {/* Uncomment the next line to show the error message */}
         {/* <span id="email-error">Please enter an email address</span> */}
