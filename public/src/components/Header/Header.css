@@ -1,16 +1,21 @@
-.header-page {
-  display: flex;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
+.header {
   border: 2px solid rgb(173, 173, 255);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   background-color: rgb(238, 238, 255);
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.header-page {
+  width: 80%;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 .header-page__logo {
   width: 15%;
 }
+
 .header-page-navbar {
   width: 70%;
   justify-content: center;
@@ -28,15 +33,10 @@
   transition: 0.5s;
 }
 .header-page-navbar__ul li:hover {
-  background-color: rgb(242, 51, 51);
+  background-color: rgb(238, 238, 255);
   border: 2px solid rgb(173, 173, 255);
-  color: white;
+  color: rgb(173, 173, 255);
   padding: 5px;
   border-radius: 15px;
   transition: 0.5s;
-}
-.header-page__utilities {
-  width: 15%;
-  justify-content: center;
-  align-items: center;
 }

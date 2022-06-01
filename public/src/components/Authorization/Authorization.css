@@ -1,0 +1,21 @@
+.authorization-page {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  height: 45px;
+}
+
+.authorization-page button{
+    background-color: white;
+    border: 0;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+}
+.authorization-page button:hover{
+    color: rgb(173, 173, 255);
+    transition: 0.5s;
+    font-size: 20px;
+}
