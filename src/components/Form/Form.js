@@ -175,8 +175,9 @@ function Form() {
           value={info.message}
         ></textarea>
         {/* <span id="email-error">Please enter an email address</span> */}
-
+        <div>
         <FileUpload />
+        </div>
         <button className="form-field btn" type="submit">
           Göndər
         </button>
