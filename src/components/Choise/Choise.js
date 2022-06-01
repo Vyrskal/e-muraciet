@@ -10,7 +10,7 @@ function Choise() {
           <a href="/">Ərİzə</a>
         </li>
         <li class="item-158" data-menuanchor="/">
-          <a href="/">İrad və təklİflər/Status</a>
+          <a href="/">Status</a>
         </li>
       </ul>
     </div>
