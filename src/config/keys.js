@@ -1,0 +1,1 @@
+export const mongoURI = 'mongodb+srv://doadmin:64aY0yV987c3SJH5@dbaas-db-3425502-8ec19cbd.mongo.ondigitalocean.com/admin?authSource=admin&replicaSet=dbaas-db-3425502&tls=true&tlsCAFile=C:\Users\DELL\Downloads\ca-certificate.crt';

@@ -1,10 +1,10 @@
 import express from "express";
 import fileUpload from "express-fileupload";
-
+console.log("server.js");
 const app = express();
 
 app.use(fileUpload());
-
+console.log("server.js");
 // Upload Endpoint
 app.post("/upload", (req, res) => {
   if (req.files === null) {
