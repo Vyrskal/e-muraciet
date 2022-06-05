@@ -4,12 +4,9 @@ import "./Header.css";
 function Header() {
   return (
     <div className="header">
-      <div div className="header-page">
+      <div className="header-page">
         <div className="header-page__logo">
-          <img
-            src="./Images/WebLogo.png"
-            alt="CompanyLogo"
-          />
+          <img src="./Images/WebLogo.png" alt="CompanyLogo" />
         </div>
         <div className="header-page-navbar">
           <ul className="header-page-navbar__ul">

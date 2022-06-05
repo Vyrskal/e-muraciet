@@ -8,10 +8,10 @@
 
 .mainForm-page {
   width: 100%;
+  margin-top: 50px;
 }
 
 table {
-  margin-top: 50px;
   width: 100%;
   background-color: rgb(173, 173, 255);
   color: white;
@@ -23,4 +23,64 @@ table {
 .mainForm-page td {
   border: 1px solid white;
   padding: 3px;
+}
+
+.module-blok h3 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+}
+.module-blok textarea {
+  font-size: 20px;
+  border: 2px solid black;
+  outline: none;
+  transition: 1s;
+  margin-top: 20px;
+}
+
+.notSignedDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+.notSigned input {
+  width: 450px;
+  height: 70px;
+  cursor: pointer;
+  font-size: 40px;
+  border-radius: 15px;
+  margin-top: 15px;
+  border: 2px solid rgb(173, 173, 255);
+  background-color: rgb(238, 238, 255);
+}
+
+.notSigned {
+  text-align: center;
+}
+
+.module-blok__buttons {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.module-blok__buttons button {
+  /* background-color: white;
+  border: 0; */
+  font-size: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid rgb(173, 173, 255);
+  background-color: rgb(238, 238, 255);
+}
+
+.notSigned.active {
+  display: block;
+}
+.notSigned {
+  display: none;
 }
