@@ -51,16 +51,16 @@ function Form() {
   const [startDate, setStartDate] = useState(new Date());
 
   const [info, setInfo] = useState({
-    // firstName: user.user.given_name,
-    // lastName:  user.user.family_name,
-    // email: user.user.email,
-    // phone: "+994 (51) 123-45-67",
-    // faculty: "ITIF",
-    // specialty: "Computer Science",
-    // year: "2019",
-    // group: "604.19E",
-    // type: "",
-    // id: user.user.sub
+    firstName: user.user.given_name,
+    lastName:  user.user.family_name,
+    email: user.user.email,
+    phone: "+994 (51) 123-45-67",
+    faculty: "ITIF",
+    specialty: "Computer Science",
+    year: "2019",
+    group: "604.19E",
+    type: "",
+    id: user.user.sub
   });
 
   const handleChange = (e) => {
