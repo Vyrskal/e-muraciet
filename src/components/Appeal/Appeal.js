@@ -10,14 +10,14 @@ function Appeal() {
 
   const handleIsAppealClicked = () => {
     setIsClicked(true);
-    // console.log(isClicked);
+    console.log(isClicked, "appeal");
   };
 
   const handleIsStatusClicked = () => {
     setIsClicked(false);
-    // console.log(isClicked);
+    console.log(isClicked, "status");
   };
-  console.log(isClicked);
+  // console.log(isClicked);
   return (
     <div className="wrapper">
       <div className="main">

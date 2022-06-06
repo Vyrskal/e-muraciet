@@ -7,18 +7,20 @@ function Choise(props) {
     <div className="inner">
       <ul className="nav menu">
         <li
-          className="item-156 current active"
+          // className="item-156 current active"
+          className={props.statusClicked ? "current" : "current active"}
           data-menuanchor="/"
           onClick={props.appealClicked}
         >
-          <p>Ərİzə</p>
+          <p className="choise">Ərİzə</p>
         </li>
         <li
-          className="item-158"
+          // className="item-158"
+          className={props.appealClicked ? "current" : "current active"}
           data-menuanchor="/"
           onClick={props.statusClicked}
         >
-          <p>Status</p>
+          <p className="choise">Status</p>
         </li>
       </ul>
     </div>
