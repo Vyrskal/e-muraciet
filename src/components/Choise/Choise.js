@@ -8,7 +8,7 @@ function Choise(props) {
       <ul className="nav menu">
         <li
           // className="item-156 current active"
-          className={props.statusClicked ? "current" : "current active"}
+          className={props.appealClicked ? "current" : "current active"}
           data-menuanchor="/"
           onClick={props.appealClicked}
         >
@@ -16,7 +16,7 @@ function Choise(props) {
         </li>
         <li
           // className="item-158"
-          className={props.appealClicked ? "current" : "current active"}
+          className={props.statusClicked ? "current" : "current active"}
           data-menuanchor="/"
           onClick={props.statusClicked}
         >
